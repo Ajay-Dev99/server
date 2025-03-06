@@ -20,11 +20,13 @@ app.use(cors({
     origin: process.env.FRONTEND_URL,
 }))
 
-
 //routes
 app.use("/user", userRouter)
 app.use('/product', productRouter)
 
+app.use("/", (req, res) => {
+    res.status(200).json("server hitted")
+})
 app.listen(process.env.PORT, (err) => {
     if (err) {
         console.log(err);
