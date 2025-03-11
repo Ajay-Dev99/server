@@ -17,7 +17,7 @@ dbConnection()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: [process.env.FRONTEND_URL, "https://client-eight-pied-17.vercel.app"],
+    origin: [process.env.FRONTEND_URL],
 
 }))
 
